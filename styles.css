@@ -261,3 +261,62 @@ body {
 .additional-info__languages-item {
   color: var(--secondary-text-color);
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.resume {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.contact-info__item:hover {
+  color: var(--text-decoration-color);
+  transform: translateX(5px);
+  transition: all 0.3s ease;
+}
+
+.contact-info__item {
+  transition: all 0.3s ease;
+}
+
+.contact-info__item:hover .contact-info__item-icon path {
+  fill: var(--text-decoration-color);
+  transition: all 0.3s ease;
+}
+
+.contact-info__header {
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact-info__header::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--text-decoration-color);
+  transition: width 0.4s ease;
+}
+
+.contact-info__header:hover::after {
+  width: 100%;
+}
+
+.resume__block {
+  transition: transform 0.2s ease;
+}
+
+.resume__block:hover {
+  transform: translateY(-2px);
+}
